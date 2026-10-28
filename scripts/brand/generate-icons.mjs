@@ -220,6 +220,13 @@ async function main() {
   writeAsset('resources/icons/trayTemplate@2x.png', tray)
   writeAsset('resources/icons/trayTemplate@2x-light.png', trayLight)
 
+  // 默认头像（搜索框按钮 / 超级面板），圆形品牌底 + 白色 M 字形
+  const avatarSvg = readSvg('avatar')
+  const avatar = (await renderSizes(avatarSvg, [128])).get(128)
+  if (!verifyPngSize(avatar, 128)) throw new Error('默认头像尺寸校验失败')
+  writeAsset('src/renderer/src/assets/image/default.png', avatar)
+  writeAsset('internal-plugins/setting/src/assets/image/default.png', avatar)
+
   console.log('[icons] 全部品牌图标生成完成')
   app.quit()
 }

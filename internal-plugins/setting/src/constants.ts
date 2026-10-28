@@ -18,7 +18,15 @@ export type WindowPositionStrategy = 'remember' | 'cursor' | 'primary' | 'lastAc
 export type ThemeType = 'system' | 'light' | 'dark'
 
 // 主题色类型
-export type PrimaryColor = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink' | 'custom'
+export type PrimaryColor =
+  | 'indigo'
+  | 'blue'
+  | 'purple'
+  | 'green'
+  | 'orange'
+  | 'red'
+  | 'pink'
+  | 'custom'
 
 // 超级面板鼠标按键类型
 export type MouseButtonType = 'middle' | 'right' | 'back' | 'forward'

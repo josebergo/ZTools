@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --bg-color: #f4f4f4;
+  --bg-color: #f5f6f8;
   --text-color: #333333;
   --text-secondary: #616161;
   --border-color: #e5e7eb;
@@ -28,16 +28,16 @@ body::-webkit-scrollbar {
   --control-bg: rgba(0, 0, 0, 0.035);
   --control-border: rgba(0, 0, 0, 0.1);
   --hover-bg: #f9fafb;
-  --active-bg: #ecfdf5;
-  --primary-color: #059669;
-  --input-bg: #f4f4f4;
+  --active-bg: #eef0fd;
+  --primary-color: #6366f1;
+  --input-bg: #eef0f4;
   --input-border: #e5e7eb;
-  --input-focus-bg: #ecfdf5;
+  --input-focus-bg: #eef0fd;
   --placeholder-color: #616161;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #4e7cf8 0%, #6366f1 52%, #8b5cf6 100%);
   --text-on-primary: #ffffff;
-  --highlight-color: #ea580c;
+  --highlight-color: #6366f1;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --success-color: #10b981;
@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
   --warning-border: #fcd34d;
   --danger-light-bg: #fee2e2;
   --danger-border: #fca5a5;
-  --dialog-bg: #f4f4f4;
+  --dialog-bg: #f5f6f8;
 }
 
 /* macOS 下使用透明背景 */
@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
 
 /* Windows 下默认使用普通背景色 */
 .os-windows:root {
-  --bg-color: #f4f4f4;
+  --bg-color: #f5f6f8;
 }
 
 /* Windows 下根据 data-material 属性应用不同材质样式 */
@@ -71,7 +71,7 @@ body::-webkit-scrollbar {
   --hover-bg: rgba(0, 0, 0, 0.04);
   --active-bg: rgba(0, 0, 0, 0.06);
   --divider-color: rgba(0, 0, 0, 0.06);
-  --highlight-color: rgba(234, 88, 12, 0.9);
+  --highlight-color: rgba(99, 102, 241, 0.95);
 }
 
 .os-windows[data-material='acrylic'] {
@@ -82,11 +82,11 @@ body::-webkit-scrollbar {
   --active-bg: rgba(0, 0, 0, 0.08);
   --divider-color: rgba(0, 0, 0, 0.06);
   --control-border: rgba(0, 0, 0, 0.15);
-  --highlight-color: rgba(234, 88, 12, 0.9);
+  --highlight-color: rgba(99, 102, 241, 0.95);
 }
 
 .os-windows[data-material='none'] {
-  --bg-color: #f4f4f4;
+  --bg-color: #f5f6f8;
   --card-bg: white;
   --control-bg: white;
 }
@@ -98,6 +98,10 @@ body::-webkit-scrollbar {
 
 .theme-purple {
   --primary-color: #7c3aed;
+}
+
+.theme-indigo {
+  --primary-color: #6366f1;
 }
 
 .theme-green {
@@ -118,25 +122,25 @@ body::-webkit-scrollbar {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #303133;
+    --bg-color: #212226;
     --text-color: #f3f4f6;
     --text-secondary: #bfc0c3;
-    --border-color: #374151;
+    --border-color: #33343a;
     --divider-color: rgba(255, 255, 255, 0.1);
     --card-bg: rgba(255, 255, 255, 0.04);
     --control-bg: rgba(255, 255, 255, 0.04);
     --control-border: rgba(255, 255, 255, 0.1);
-    --hover-bg: #374151;
-    --active-bg: rgba(52, 211, 153, 0.12);
-    --primary-color: #34d399;
-    --input-bg: #374151;
-    --input-border: #374151;
-    --input-focus-bg: #4b5563;
+    --hover-bg: #2e2f35;
+    --active-bg: rgba(129, 140, 248, 0.14);
+    --primary-color: #818cf8;
+    --input-bg: #2e2f35;
+    --input-border: #33343a;
+    --input-focus-bg: #33343a;
     --placeholder-color: #b8b8b8;
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-gradient: linear-gradient(135deg, #4e7cf8 0%, #6366f1 52%, #8b5cf6 100%);
     --text-on-primary: #ffffff;
-    --highlight-color: #fb923c;
+    --highlight-color: #818cf8;
     --danger-color: #f87171;
     --warning-color: #fbbf24;
     --success-color: #34d399;
@@ -149,7 +153,7 @@ body::-webkit-scrollbar {
     --warning-border: rgba(251, 191, 36, 0.4);
     --danger-light-bg: rgba(248, 113, 113, 0.2);
     --danger-border: rgba(248, 113, 113, 0.4);
-    --dialog-bg: #303133;
+    --dialog-bg: #212226;
   }
 
   /* macOS 暗色模式下使用透明背景 */
@@ -159,7 +163,7 @@ body::-webkit-scrollbar {
 
   /* Windows 暗色模式下默认使用普通背景色 */
   .os-windows:root {
-    --bg-color: #303133;
+    --bg-color: #212226;
   }
 
   /* Windows 暗色模式下根据 data-material 属性应用不同材质样式 */
@@ -170,7 +174,7 @@ body::-webkit-scrollbar {
     --hover-bg: rgba(255, 255, 255, 0.05);
     --active-bg: rgba(255, 255, 255, 0.08);
     --divider-color: rgba(255, 255, 255, 0.08);
-    --highlight-color: rgba(251, 146, 60, 0.85);
+    --highlight-color: rgba(129, 140, 248, 0.9);
   }
 
   .os-windows[data-material='acrylic'] {
@@ -181,13 +185,13 @@ body::-webkit-scrollbar {
     --active-bg: rgba(255, 255, 255, 0.08);
     --divider-color: rgba(255, 255, 255, 0.06);
     --control-border: rgba(255, 255, 255, 0.15);
-    --highlight-color: rgba(251, 146, 60, 0.85);
+    --highlight-color: rgba(129, 140, 248, 0.9);
   }
 
   .os-windows[data-material='none'] {
-    --bg-color: #303133;
-    --card-bg: #3a3a3c;
-    --control-bg: #48484a;
+    --bg-color: #212226;
+    --card-bg: #2a2b30;
+    --control-bg: #3a3b41;
   }
 
   /* 主题色定义 - 暗色模式 */
@@ -198,6 +202,10 @@ body::-webkit-scrollbar {
 
   .theme-purple {
     --primary-color: #a78bfa;
+  }
+
+  .theme-indigo {
+    --primary-color: #818cf8;
   }
 
   .theme-green {

@@ -1030,6 +1030,11 @@ onUnmounted(() => {
   flex-shrink: 0;
 }
 
+/* 插件模式下顶部搜索栏与插件区域之间的发丝分隔线 */
+.search-box-wrapper.with-divider {
+  border-bottom: 1px solid var(--divider-color);
+}
+
 .plugin-placeholder {
   flex: 1;
   /* min-height: 500px; */

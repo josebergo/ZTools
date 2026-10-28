@@ -1445,9 +1445,9 @@ defineExpose({
 .placeholder-text {
   position: absolute;
   left: 0;
-  color: #7a7a7a;
+  color: var(--text-secondary);
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 350;
   line-height: 1.3;
   pointer-events: none;
   white-space: nowrap;
@@ -1459,11 +1459,7 @@ defineExpose({
 }
 
 /* 暗色模式下的 placeholder 颜色 */
-@media (prefers-color-scheme: dark) {
-  .placeholder-text {
-    color: #aaaaaa;
-  }
-}
+/* 暗色模式下占位符颜色由 --text-secondary 统一提供 */
 
 .search-input {
   /* 移除 flex: 1，改为根据内容自动调整 */

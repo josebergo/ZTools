@@ -110,7 +110,7 @@ export const useWindowStore = defineStore('window', () => {
   const searchMode = ref<SearchMode>('aggregate')
 
   const theme = ref('system') // system, light, dark
-  const primaryColor = ref('green') // blue, purple, green, orange, red, pink, custom
+  const primaryColor = ref('indigo') // indigo, blue, purple, green, orange, red, pink, custom
   const customColor = ref('#db2777') // 自定义颜色
   const compactMainWindowHeader = ref(false) // 主窗口是否使用紧凑顶部栏
 
@@ -671,7 +671,7 @@ export const useWindowStore = defineStore('window', () => {
           updatePrimaryColor(data.primaryColor)
         } else {
           // 旧配置缺少主题色时使用当前产品默认的绿色。
-          updatePrimaryColor('green')
+          updatePrimaryColor('indigo')
         }
         if (data.acrylicLightOpacity !== undefined) {
           acrylicLightOpacity.value = data.acrylicLightOpacity
@@ -719,7 +719,7 @@ export const useWindowStore = defineStore('window', () => {
         hideMainWindowOnPluginEsc.value = data.hideMainWindowOnPluginEsc === true
       } else {
         // 首次启动没有通用设置时使用当前产品默认的绿色。
-        updatePrimaryColor('green')
+        updatePrimaryColor('indigo')
       }
 
       // 监听系统主题变化，重新应用自定义颜色

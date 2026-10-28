@@ -358,7 +358,7 @@ export function useSuperPanelDrag<T extends DragItem>(options: DragOptions<T>): 
       transform: `translate3d(${((slot % 3) - (index % 3)) * geometry.stepX}px, ${(Math.floor(slot / 3) - Math.floor(index / 3)) * geometry.stepY}px, 0)`,
       transitionProperty: 'transform',
       transitionDuration: '300ms',
-      transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1.15)'
+      transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)'
     }
   }
 

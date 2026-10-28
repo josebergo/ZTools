@@ -8,10 +8,11 @@ export function normalizeTheme(theme: unknown): ThemeType {
 }
 
 /**
- * 规范化主题色值，非法值回退为 green。
+ * 规范化主题色值，非法值回退为品牌默认 indigo。
  */
 export function normalizePrimaryColor(color: unknown): PrimaryColor {
-  return color === 'blue' ||
+  return color === 'indigo' ||
+    color === 'blue' ||
     color === 'purple' ||
     color === 'green' ||
     color === 'orange' ||
@@ -19,7 +20,7 @@ export function normalizePrimaryColor(color: unknown): PrimaryColor {
     color === 'pink' ||
     color === 'custom'
     ? color
-    : 'green'
+    : 'indigo'
 }
 
 export function normalizeWindowMaterial(material: unknown): 'mica' | 'acrylic' | 'none' {

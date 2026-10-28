@@ -19,18 +19,18 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --bg-color: #f4f4f4;
+  --bg-color: #f5f6f8;
   --text-color: #333333;
   --text-secondary: #616161;
   --border-color: #e5e7eb;
   --divider-color: rgba(0, 0, 0, 0.1);
   --control-bg: rgba(0, 0, 0, 0.035);
   --hover-bg: #f9fafb;
-  --active-bg: #ecfdf5;
-  --primary-color: #059669;
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --active-bg: #eef0fd;
+  --primary-color: #6366f1;
+  --primary-gradient: linear-gradient(135deg, #4e7cf8 0%, #6366f1 52%, #8b5cf6 100%);
   --text-on-primary: #ffffff;
-  --highlight-color: #ea580c;
+  --highlight-color: #6366f1;
 }
 
 /* macOS 下使用透明背景 */
@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
   --hover-bg: rgba(0, 0, 0, 0.04);
   --active-bg: rgba(0, 0, 0, 0.06);
   --divider-color: rgba(0, 0, 0, 0.06);
-  --highlight-color: rgba(234, 88, 12, 0.9);
+  --highlight-color: rgba(99, 102, 241, 0.95);
 }
 
 .os-windows[data-material='acrylic'] {
@@ -62,11 +62,11 @@ body::-webkit-scrollbar {
   --active-bg: rgba(0, 0, 0, 0.08);
   --divider-color: rgba(0, 0, 0, 0.06);
   --control-border: rgba(0, 0, 0, 0.15);
-  --highlight-color: rgba(234, 88, 12, 0.9);
+  --highlight-color: rgba(99, 102, 241, 0.95);
 }
 
 .os-windows[data-material='none'] {
-  --bg-color: #f4f4f4;
+  --bg-color: #f5f6f8;
   --card-bg: white;
   --control-bg: white;
 }
@@ -80,7 +80,14 @@ body::-webkit-scrollbar {
   --primary-color: #7c3aed;
 }
 
-:root,
+:root {
+  --primary-color: #6366f1;
+}
+
+.theme-indigo {
+  --primary-color: #6366f1;
+}
+
 .theme-green {
   --primary-color: #059669;
 }
@@ -99,16 +106,16 @@ body::-webkit-scrollbar {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #303133;
+    --bg-color: #212226;
     --text-color: #f3f4f6;
     --text-secondary: #bfc0c3;
-    --border-color: #374151;
+    --border-color: #33343a;
     --divider-color: rgba(255, 255, 255, 0.1);
     --control-bg: rgba(255, 255, 255, 0.04);
-    --hover-bg: #374151;
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --hover-bg: #2e2f35;
+    --primary-gradient: linear-gradient(135deg, #4e7cf8 0%, #6366f1 52%, #8b5cf6 100%);
     --text-on-primary: #ffffff;
-    --highlight-color: #fb923c;
+    --highlight-color: #818cf8;
   }
 
   /* macOS 暗色模式下使用透明背景 */
@@ -118,7 +125,7 @@ body::-webkit-scrollbar {
 
   /* Windows 暗色模式下默认使用普通背景色 */
   .os-windows:root {
-    --bg-color: #303133;
+    --bg-color: #212226;
   }
 
   /* Windows 暗色模式下根据 data-material 属性应用不同材质样式 */
@@ -129,7 +136,7 @@ body::-webkit-scrollbar {
     --hover-bg: rgba(255, 255, 255, 0.05);
     --active-bg: rgba(255, 255, 255, 0.08);
     --divider-color: rgba(255, 255, 255, 0.08);
-    --highlight-color: rgba(251, 146, 60, 0.85);
+    --highlight-color: rgba(129, 140, 248, 0.9);
   }
 
   .os-windows[data-material='acrylic'] {
@@ -140,13 +147,13 @@ body::-webkit-scrollbar {
     --active-bg: rgba(255, 255, 255, 0.08);
     --divider-color: rgba(255, 255, 255, 0.06);
     --control-border: rgba(255, 255, 255, 0.15);
-    --highlight-color: rgba(251, 146, 60, 0.85);
+    --highlight-color: rgba(129, 140, 248, 0.9);
   }
 
   .os-windows[data-material='none'] {
-    --bg-color: #303133;
-    --card-bg: #3a3a3c;
-    --control-bg: #48484a;
+    --bg-color: #212226;
+    --card-bg: #2a2b30;
+    --control-bg: #3a3b41;
   }
 
   /* 主题色定义 - 暗色模式 */
@@ -159,7 +166,14 @@ body::-webkit-scrollbar {
     --primary-color: #a78bfa;
   }
 
-  :root,
+  :root {
+    --primary-color: #818cf8;
+  }
+
+  .theme-indigo {
+    --primary-color: #818cf8;
+  }
+
   .theme-green {
     --primary-color: #34d399;
   }
@@ -242,18 +256,18 @@ html:not(.os-windows[data-material='mica']):not(.os-windows[data-material='acryl
 
   /* 暗色模式下默认的 active-bg 和 hover-bg（非 Windows 材质模式） */
   html:not(.os-windows[data-material='mica']):not(.os-windows[data-material='acrylic']) body {
-    --active-bg: color-mix(in srgb, var(--primary-color) 12%, #303133);
-    --hover-bg: color-mix(in srgb, var(--primary-color) 5%, #303133);
+    --active-bg: color-mix(in srgb, var(--primary-color) 14%, #212226);
+    --hover-bg: color-mix(in srgb, var(--primary-color) 7%, #212226);
   }
 
   /* 暗色模式下的文本选择样式 */
   ::selection {
-    background: color-mix(in srgb, var(--primary-color) 40%, #303133);
+    background: color-mix(in srgb, var(--primary-color) 40%, #212226);
     color: var(--text-color);
   }
 
   ::-moz-selection {
-    background: color-mix(in srgb, var(--primary-color) 40%, #303133);
+    background: color-mix(in srgb, var(--primary-color) 40%, #212226);
     color: var(--text-color);
   }
 }

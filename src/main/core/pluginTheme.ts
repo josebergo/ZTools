@@ -12,6 +12,7 @@ export interface PluginThemeState {
 
 const PRIMARY_COLOR_MAP: Record<'light' | 'dark', Record<string, string>> = {
   light: {
+    indigo: '#6366F1',
     blue: '#0284c7',
     purple: '#7c3aed',
     green: '#059669',
@@ -20,6 +21,7 @@ const PRIMARY_COLOR_MAP: Record<'light' | 'dark', Record<string, string>> = {
     pink: '#db2777'
   },
   dark: {
+    indigo: '#818CF8',
     blue: '#38bdf8',
     purple: '#a78bfa',
     green: '#34d399',
@@ -52,7 +54,7 @@ export function resolvePluginPrimaryColor(themeState: PluginThemeState): string 
     return themeState.customColor as string
   }
   const colorMap = PRIMARY_COLOR_MAP[themeState.isDark ? 'dark' : 'light']
-  return colorMap[themeState.primaryColor] || colorMap.green
+  return colorMap[themeState.primaryColor] || colorMap.indigo
 }
 
 /**

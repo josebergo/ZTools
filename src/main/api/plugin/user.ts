@@ -62,7 +62,7 @@ export class PluginUserAPI {
 
     // 每次先读取官方账号会话，退出登录后不得继续返回缓存令牌。
     const session = await loadOfficialAccountSession()
-    if (!session?.token || !session.username) throw new Error('请先登录 ZTools 账号')
+    if (!session?.token || !session.username) throw new Error('请先登录 MaheTools 账号')
     const cacheKey = `${session.username}\n${pluginId}`
     const cached = this.tokenCache.get(cacheKey)
     if (cached && cached.expiredAt - PLUGIN_TOKEN_REFRESH_WINDOW_MS > Date.now()) {

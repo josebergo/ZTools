@@ -58,7 +58,7 @@ export class PluginPaymentAPI {
     const pluginId = this.manager?.getPluginManifestNameByWebContents(event.sender)
     const account = await loadOfficialAccountSession()
     if (!pluginId || event.sender.isDestroyed()) throw new Error('无法确认当前插件身份')
-    if (!account?.token || !account.username) throw new Error('请先登录 ZTools')
+    if (!account?.token || !account.username) throw new Error('请先登录 MaheTools')
     // 支付结束后只恢复真实发起窗口，分离插件不能意外唤起主窗口。
     const paymentOwner =
       detachedWindowManager.getWindowByPluginWebContents(event.sender.id) || this.main

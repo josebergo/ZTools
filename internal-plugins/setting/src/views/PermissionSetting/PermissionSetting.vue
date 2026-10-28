@@ -229,7 +229,7 @@ async function handleApproveRequest(request: PendingRequestView): Promise<void> 
 
   const confirmed = await confirm({
     title: '授权高级 API 风险提示',
-    message: `即将允许插件 "${request.pluginName}" 调用以下 ${selectedApis.length} 个高级 API：\n${selectedApis.join('\n')}\n\n高级 API 可读写 ZTools 设置、管理插件或执行其他高权限操作，请仅授权你信任的插件。授权后立即生效，可随时在本页移除。`,
+    message: `即将允许插件 "${request.pluginName}" 调用以下 ${selectedApis.length} 个高级 API：\n${selectedApis.join('\n')}\n\n高级 API 可读写 MaheTools 设置、管理插件或执行其他高权限操作，请仅授权你信任的插件。授权后立即生效，可随时在本页移除。`,
     type: 'danger',
     confirmText: '已知风险，批准',
     cancelText: '取消'
@@ -413,7 +413,7 @@ async function handleManualAddGrant(): Promise<void> {
   if (manualFullAccess.value) {
     const confirmed = await confirm({
       title: '授权高级 API 风险提示',
-      message: `即将允许插件 "${pluginName}" 调用全部高级 API（${availableChannels.value.length} 个）。\n\n高级 API 可读写 ZTools 设置、管理插件或执行其他高权限操作，请仅授权你完全信任的插件。`,
+      message: `即将允许插件 "${pluginName}" 调用全部高级 API（${availableChannels.value.length} 个）。\n\n高级 API 可读写 MaheTools 设置、管理插件或执行其他高权限操作，请仅授权你完全信任的插件。`,
       type: 'danger',
       confirmText: '已知风险，继续授权',
       cancelText: '取消'

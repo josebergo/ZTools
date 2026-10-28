@@ -100,7 +100,7 @@ class PluginAiAPI {
 
   /**
    * 绑定主窗口和插件管理器，并注册插件侧 AI IPC。
-   * @param mainWindow ZTools 主窗口
+   * @param mainWindow MaheTools 主窗口
    * @param pluginManager 插件运行时管理器
    * @returns 无返回值
    */

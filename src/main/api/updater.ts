@@ -318,7 +318,7 @@ export class UpdaterAPI {
     const error = '开发环境不支持升级'
     const options: Electron.MessageBoxOptions = {
       type: 'info',
-      title: 'ZTools',
+      title: 'MaheTools',
       message: error,
       buttons: ['知道了'],
       defaultId: 0,

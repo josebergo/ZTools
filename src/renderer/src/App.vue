@@ -315,7 +315,8 @@ async function launchTabTarget(target: string, text: string): Promise<void> {
     target,
     context: { searchQuery: '', pastedText: text, pastedImage: null, pastedFiles: null }
   })
-  if (!result.success) new Notification('ZTools', { body: result.error || '无法启动 Tab 目标指令' })
+  if (!result.success)
+    new Notification('MaheTools', { body: result.error || '无法启动 Tab 目标指令' })
 }
 
 // 分离当前插件到独立窗口

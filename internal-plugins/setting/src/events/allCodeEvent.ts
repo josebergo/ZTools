@@ -89,7 +89,7 @@ addZtoolsCodeEventListener('function.pin-to-search', async (e) => {
 })
 
 /**
- * 退出 ZTools 应用
+ * 退出 MaheTools 应用
  */
 addZtoolsCodeEventListener('function.exit', () => {
   void window.ztools.internal.quitApp()

@@ -56,7 +56,7 @@ class WindowsPlatformUpdater implements PlatformUpdaterService {
 
     const result = await dialog.showMessageBox({
       type: 'info',
-      title: '需要更新 ZTools',
+      title: '需要更新 MaheTools',
       message: '请安装一次最新完整版本',
       detail:
         '当前版本使用的是较早的更新方式，无法直接完成本次升级。安装最新完整版本后，即可继续正常接收更新，您的数据、设置和插件都会保留。',

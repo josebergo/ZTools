@@ -59,7 +59,7 @@ test('可以切换私有部署、登录并开启同步', async ({ browserName: _
         ?.dispatchEvent(new MouseEvent('click', { bubbles: true }))
     `
     )
-    await waitForSettingsText(electronApp, '使用 ZTools 官方同步服务')
+    await waitForSettingsText(electronApp, '使用 MaheTools 官方同步服务')
 
     await executeInSettings(
       electronApp,
@@ -306,7 +306,7 @@ test('个人中心确认删除账号后退出登录', async ({ browserName: _bro
     `
     )
     await waitForSettingsText(electronApp, '开机自动启动')
-    await waitForSettingsText(electronApp, '注册/登录 ZTools')
+    await waitForSettingsText(electronApp, '注册/登录 MaheTools')
 
     const accountState = await executeInSettings(
       electronApp,
@@ -394,7 +394,7 @@ test('个人中心修改密码后退出登录并保留本地账号数据', async
       `document.querySelector('[data-testid="submit-password-change"]')?.dispatchEvent(new MouseEvent('click', { bubbles: true }))`
     )
     await waitForSettingsText(electronApp, '开机自动启动')
-    await waitForSettingsText(electronApp, '注册/登录 ZTools')
+    await waitForSettingsText(electronApp, '注册/登录 MaheTools')
 
     const accountState = await executeInSettings(
       electronApp,

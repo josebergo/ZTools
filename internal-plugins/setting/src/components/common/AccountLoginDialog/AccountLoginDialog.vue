@@ -1,7 +1,7 @@
 <template>
   <BaseDialog
     :visible="visible"
-    title="ZTools 账号注册/登录"
+    title="MaheTools 账号注册/登录"
     subtitle="同步数据、插件评论和个人配置"
     max-width="430px"
     @update:visible="emit('update:visible', $event)"

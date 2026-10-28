@@ -123,7 +123,7 @@ describe('plugin getUserTempToken API', () => {
     const loggedOutApi = new PluginUserAPI()
     loggedOutApi.init({ getPluginManifestNameByWebContents: () => 'quick-translate' } as any)
     handler = mocks.registerPluginApiServices.mock.calls[0][0].getUserTempToken
-    await expect(handler({ sender: {} })).rejects.toThrow('请先登录 ZTools 账号')
+    await expect(handler({ sender: {} })).rejects.toThrow('请先登录 MaheTools 账号')
     expect(mocks.httpRequest).not.toHaveBeenCalled()
   })
 })

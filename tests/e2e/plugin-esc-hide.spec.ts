@@ -7,7 +7,7 @@ const projectRoot = path.resolve(__dirname, '../..')
 const settingsUrlFragments = ['http://127.0.0.1:15177', 'internal-plugins/setting/index.html']
 
 /**
- * 使用隔离数据目录启动当前构建的 ZTools 测试实例。
+ * 使用隔离数据目录启动当前构建的 MaheTools 测试实例。
  * @param dataRoot 测试实例专用数据目录。
  * @param legacyRoot 测试实例专用旧数据目录。
  * @returns 已启动的 Electron 应用实例。
@@ -75,9 +75,9 @@ async function readMainWindowState(
 ): Promise<{ visible: boolean; pluginViewCount: number }> {
   return await electronApp.evaluate(({ BrowserWindow }) => {
     const mainWindow = BrowserWindow.getAllWindows().find(
-      (window) => window.getTitle() === 'ZTools'
+      (window) => window.getTitle() === 'MaheTools'
     )
-    if (!mainWindow) throw new Error('未找到 ZTools 主窗口')
+    if (!mainWindow) throw new Error('未找到 MaheTools 主窗口')
     return {
       visible: mainWindow.isVisible(),
       pluginViewCount: mainWindow.contentView.children.length
@@ -93,9 +93,9 @@ async function readMainWindowState(
 async function showMainWindow(electronApp: ElectronApplication): Promise<void> {
   await electronApp.evaluate(({ BrowserWindow }) => {
     const mainWindow = BrowserWindow.getAllWindows().find(
-      (window) => window.getTitle() === 'ZTools'
+      (window) => window.getTitle() === 'MaheTools'
     )
-    if (!mainWindow) throw new Error('未找到 ZTools 主窗口')
+    if (!mainWindow) throw new Error('未找到 MaheTools 主窗口')
     mainWindow.show()
     mainWindow.webContents.focus()
   })

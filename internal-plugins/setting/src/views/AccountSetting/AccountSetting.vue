@@ -36,7 +36,9 @@ const username = computed(() => accountProfile.uid)
 const nickname = computed(() => accountProfile.nickname)
 const avatar = computed(() => accountProfile.avatarUrl || defaultAvatar)
 const loadingProfile = computed(() => accountProfile.loading)
-const displayName = computed(() => accountProfile.nickname || accountProfile.uid || 'ZTools 用户')
+const displayName = computed(
+  () => accountProfile.nickname || accountProfile.uid || 'MaheTools 用户'
+)
 
 onMounted(() => {
   void loadAccount()
@@ -136,7 +138,7 @@ async function logout(): Promise<void> {
 }
 
 /**
- * 确认后永久删除当前服务端账号，并在成功后退出 ZTools 登录。
+ * 确认后永久删除当前服务端账号，并在成功后退出 MaheTools 登录。
  * @returns 删除账号流程完成后结束的 Promise
  */
 async function deleteAccount(): Promise<void> {
@@ -331,7 +333,7 @@ function formatBytes(value?: number): string {
         </button>
         <div class="profile-heading">
           <strong>{{ displayName }}</strong>
-          <span>ZTools 云同步账号</span>
+          <span>MaheTools 云同步账号</span>
         </div>
       </section>
 

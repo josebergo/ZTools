@@ -388,7 +388,7 @@ class APIManager {
       source: 'global-shortcut'
     })
     if (!result.success && Notification.isSupported())
-      new Notification({ title: 'ZTools', body: result.error || '快捷键启动失败' }).show()
+      new Notification({ title: 'MaheTools', body: result.error || '快捷键启动失败' }).show()
   }
 }
 

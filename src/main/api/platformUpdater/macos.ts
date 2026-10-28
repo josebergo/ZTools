@@ -55,7 +55,7 @@ class MacPlatformUpdater implements PlatformUpdaterService {
 
     const result = await dialog.showMessageBox({
       type: 'info',
-      title: '需要更新 ZTools',
+      title: '需要更新 MaheTools',
       message: '请安装一次最新完整版本',
       detail:
         '当前版本使用的是较早的 macOS 更新方式，无法直接切换到签名整包更新。安装最新 DMG 后即可继续正常接收更新，您的数据、设置和插件都会保留。',

@@ -732,7 +732,7 @@ async function handleSyncToggle(): Promise<void> {
     }
 
     if (syncEnabled.value && !loggedIn.value) {
-      warning(isPrivateMode.value ? '请先登录私有同步服务器' : '请先通过左下角登录 ZTools 账号')
+      warning(isPrivateMode.value ? '请先登录私有同步服务器' : '请先通过左下角登录 MaheTools 账号')
       syncEnabled.value = false
       return
     }
@@ -949,8 +949,10 @@ onUnmounted(() => {
 
       <div class="service-settings" data-testid="sync-service-settings">
         <div v-if="!isPrivateMode" class="service-description">
-          <span>使用 ZTools 官方同步服务</span>
-          <span>{{ loggedIn ? `当前账号：${loggedUser}` : '请通过左下角登录 ZTools 账号' }}</span>
+          <span>使用 MaheTools 官方同步服务</span>
+          <span>{{
+            loggedIn ? `当前账号：${loggedUser}` : '请通过左下角登录 MaheTools 账号'
+          }}</span>
         </div>
 
         <div

@@ -17,7 +17,7 @@
           <div>
             <!-- 快捷键类型说明 -->
             <div v-if="isAppShortcut" class="form-notice">
-              应用快捷键仅在 ZTools 窗口激活时生效，不会与其他应用冲突
+              应用快捷键仅在 MaheTools 窗口激活时生效，不会与其他应用冲突
             </div>
 
             <!-- 快捷键录制 -->

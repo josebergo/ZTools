@@ -282,7 +282,7 @@ async function archiveNotification(item: NotificationItem): Promise<boolean> {
 }
 
 /**
- * 判断当前是否登录官方 ZTools 账号。
+ * 判断当前是否登录官方 MaheTools 账号。
  * @returns 已登录官方账号时返回 true。
  */
 async function isOfficialAccountLoggedIn(): Promise<boolean> {

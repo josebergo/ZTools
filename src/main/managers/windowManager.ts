@@ -643,7 +643,7 @@ class WindowManager {
     this.tray = new Tray(icon)
 
     // 设置托盘提示文字
-    this.tray.setToolTip('ZTools')
+    this.tray.setToolTip('MaheTools')
 
     // 创建右键菜单
     this.createTrayMenu()

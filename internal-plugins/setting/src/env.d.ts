@@ -18,7 +18,7 @@ declare module '*.vue' {
   export default component
 }
 
-// 类型定义文件：定义 ZTools 设置插件可用的 API
+// 类型定义文件：定义 MaheTools 设置插件可用的 API
 
 // Preload services 类型声明（对应 public/preload/services.js）
 interface Services {

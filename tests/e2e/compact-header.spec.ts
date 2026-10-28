@@ -18,7 +18,7 @@ interface DetachedWindowLayoutSnapshot {
 }
 
 /**
- * 使用隔离数据目录启动当前构建的 ZTools 测试实例。
+ * 使用隔离数据目录启动当前构建的 MaheTools 测试实例。
  * @param dataRoot 测试实例专用数据目录。
  * @param legacyRoot 测试实例专用旧数据目录。
  * @returns 已启动的 Electron 应用实例。
@@ -86,9 +86,9 @@ async function readMainWindowLayout(
 ): Promise<MainWindowLayoutSnapshot> {
   return await electronApp.evaluate(({ BrowserWindow }) => {
     const mainWindow = BrowserWindow.getAllWindows().find(
-      (window) => window.getTitle() === 'ZTools'
+      (window) => window.getTitle() === 'MaheTools'
     )
-    if (!mainWindow) throw new Error('未找到 ZTools 主窗口')
+    if (!mainWindow) throw new Error('未找到 MaheTools 主窗口')
 
     const pluginView = mainWindow.contentView.children[0]
     return {

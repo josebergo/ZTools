@@ -240,7 +240,7 @@ async function handleScreenshot(ctx: SystemCommandContext): Promise<any> {
     clipboard.writeImage(nativeImage.createFromDataURL(result.image))
 
     new Notification({
-      title: 'ZTools',
+      title: 'MaheTools',
       body: '截图已复制到剪贴板'
     }).show()
 
@@ -579,7 +579,7 @@ function handleColorPicker(ctx: SystemCommandContext): Promise<any> {
           clipboard.writeText(result.hex)
           console.log('[SystemCmd] 已复制颜色值:', result.hex)
           if (Notification.isSupported()) {
-            new Notification({ title: 'ZTools', body: `已复制颜色值: ${result.hex}` }).show()
+            new Notification({ title: 'MaheTools', body: `已复制颜色值: ${result.hex}` }).show()
           }
           resolve({ success: true, hex: result.hex })
         } else {
@@ -618,7 +618,7 @@ function handleAddToWakeupBlacklist(ctx: SystemCommandContext): any {
   if (isDuplicate) {
     ctx.mainWindow?.hide()
     if (Notification.isSupported()) {
-      new Notification({ title: 'ZTools', body: `${appName} 已在唤醒黑名单中` }).show()
+      new Notification({ title: 'MaheTools', body: `${appName} 已在唤醒黑名单中` }).show()
     }
     return { success: false, error: '该应用已在唤醒黑名单中' }
   }
@@ -636,7 +636,7 @@ function handleAddToWakeupBlacklist(ctx: SystemCommandContext): any {
   ctx.mainWindow?.hide()
   if (Notification.isSupported()) {
     new Notification({
-      title: 'ZTools',
+      title: 'MaheTools',
       body: `已将 ${label} 添加到唤醒黑名单`
     }).show()
   }

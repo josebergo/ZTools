@@ -1,5 +1,5 @@
-appId: top.z-tools
-productName: ZTools
+appId: top.mahetools
+productName: MaheTools
 publish:
   provider: github
   owner: ZToolsCenter
@@ -36,12 +36,12 @@ asarUnpack:
   - '**/node_modules/@img/**/*'
 fileAssociations:
   - ext: zpx
-    name: ZTools Plugin
-    description: ZTools Plugin Package
+    name: MaheTools Plugin
+    description: MaheTools Plugin Package
     role: Viewer
 win:
   compression: maximum
-  executableName: ZTools
+  executableName: MaheTools
   artifactName: ${name}-${version}-${os}-${arch}.${ext}
   target:
     - target: nsis

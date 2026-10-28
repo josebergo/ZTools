@@ -393,7 +393,7 @@ class InternalApiRequestDialogManager {
           ${safeReason ? `<div class="reason-block">申请说明：${safeReason}</div>` : ''}
           <div class="section-label">申请的 API（${entry.apis.length} 项）</div>
           <div class="api-list">${apiChips}</div>
-          <div class="risk-note">高级 API 可读写 ZTools 设置、管理插件或执行其他高权限操作，请仅授权你信任的插件。授权立即生效，可随时在设置的「高级权限」页移除。</div>
+          <div class="risk-note">高级 API 可读写 MaheTools 设置、管理插件或执行其他高权限操作，请仅授权你信任的插件。授权立即生效，可随时在设置的「高级权限」页移除。</div>
         </div>
         <div class="dialog-footer">
           <button class="btn-later" data-testid="popup-later">稍后处理</button>

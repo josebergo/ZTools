@@ -26,7 +26,9 @@ let stopSyncStatusListener: (() => void) | null = null
 
 const loggedIn = computed(() => accountProfile.loggedIn)
 const avatar = computed(() => accountProfile.avatarUrl || defaultAvatar)
-const displayName = computed(() => accountProfile.nickname || accountProfile.uid || 'ZTools 用户')
+const displayName = computed(
+  () => accountProfile.nickname || accountProfile.uid || 'MaheTools 用户'
+)
 
 /**
  * 切换右侧设置页面。
@@ -201,7 +203,7 @@ async function handleGithubLoginSuccess(data: {
           <div class="i-z-cloud" />
         </div>
         <div class="account-info">
-          <strong>{{ loggedIn ? displayName : '注册/登录 ZTools' }}</strong>
+          <strong>{{ loggedIn ? displayName : '注册/登录 MaheTools' }}</strong>
           <span>{{ loggedIn ? '查看个人中心' : '同步数据与评论互动' }}</span>
         </div>
       </button>

@@ -4,14 +4,14 @@
       <img :src="logo" class="header-icon" draggable="false" />
       <div class="header-info">
         <div class="title">需要开启辅助功能权限</div>
-        <div class="subtitle">ZTools 启动权限检查</div>
+        <div class="subtitle">MaheTools 启动权限检查</div>
       </div>
     </div>
 
     <main class="content">
       <div class="message">
-        <p>ZTools 需要辅助功能权限来响应快捷键并完成键盘与窗口操作。</p>
-        <p>请在“系统设置 → 隐私与安全性 → 辅助功能”中允许 ZTools。</p>
+        <p>MaheTools 需要辅助功能权限来响应快捷键并完成键盘与窗口操作。</p>
+        <p>请在“系统设置 → 隐私与安全性 → 辅助功能”中允许 MaheTools。</p>
       </div>
       <p class="reset-hint">若系统设置已开启但仍无法授权，可重置旧记录；应用重启后需要重新授权。</p>
       <div
@@ -55,7 +55,7 @@ let checkingTimer: number | undefined
 let resetConfirmTimer: number | undefined
 
 const statusMessage = computed(() => {
-  if (resetSucceeded.value) return '权限记录已重置，正在重新启动 ZTools...'
+  if (resetSucceeded.value) return '权限记录已重置，正在重新启动 MaheTools...'
   if (resetError.value) return resetError.value
   if (isResetting.value) return '正在重置辅助功能权限...'
   if (isConfirmingReset.value) return '再次点击“确认重置”将清除当前授权记录'

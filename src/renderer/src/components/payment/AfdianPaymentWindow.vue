@@ -10,11 +10,11 @@
     <section class="payment-card">
       <header class="brand-header">
         <div class="brand-mark">
-          <img :src="logo" alt="ZTools" />
+          <img :src="logo" alt="MaheTools" />
         </div>
         <div class="brand-copy">
-          <div class="eyebrow">ZTools 安全支付</div>
-          <h1>{{ state.productName || '赞助 ZTools' }}</h1>
+          <div class="eyebrow">MaheTools 安全支付</div>
+          <h1>{{ state.productName || '赞助 MaheTools' }}</h1>
         </div>
         <div class="afdian-badge">爱发电提供支付</div>
       </header>
@@ -181,7 +181,7 @@
         <button type="button" class="link-button" @click="openOriginal">
           登录或支付遇到问题？打开爱发电原页面
         </button>
-        <p>支付过程由爱发电处理，ZTools 不会读取你的支付账号或密码</p>
+        <p>支付过程由爱发电处理，MaheTools 不会读取你的支付账号或密码</p>
       </footer>
     </section>
   </main>
@@ -193,8 +193,8 @@ import logo from '../../assets/logo.png'
 import type { AfdianPaymentMethod, AfdianPaymentWindowState } from '@shared/afdianPaymentWindow'
 
 const state = ref<AfdianPaymentWindowState>({
-  title: 'ZTools 支付',
-  productName: '赞助 ZTools',
+  title: 'MaheTools 支付',
+  productName: '赞助 MaheTools',
   amount: '',
   method: 'wechat',
   stage: 'loading',

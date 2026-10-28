@@ -82,7 +82,7 @@ async function loadOfficialProvider(): Promise<void> {
     }
   } catch (cause) {
     if (requestId !== officialProviderRequestId) return
-    console.error('加载 ZTools 官方模型失败:', cause)
+    console.error('加载 MaheTools 官方模型失败:', cause)
     officialProvider.value = null
     officialError.value = '官方模型暂不可用'
   }
@@ -339,7 +339,7 @@ onBeforeUnmount(() => {
               </div>
               <div class="official-status-chips">
                 <OfficialAiCredits v-if="officialProvider.loggedIn" />
-                <span v-else class="official-login-status"> 登录 ZTools 账号后可调用 </span>
+                <span v-else class="official-login-status"> 登录 MaheTools 账号后可调用 </span>
               </div>
             </header>
             <div class="official-model-table-wrap">
@@ -455,7 +455,7 @@ onBeforeUnmount(() => {
           </article>
 
           <div v-else-if="officialError" class="official-error">
-            ZTools 官方模型：{{ officialError }}
+            MaheTools 官方模型：{{ officialError }}
           </div>
 
           <article

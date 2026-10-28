@@ -1,9 +1,9 @@
 {
-  "name": "ZTools",
+  "name": "MaheTools",
   "version": "3.2.0",
-  "description": "ZTools",
+  "description": "MaheTools",
   "main": "./out/main/index.js",
-  "author": "ZToolsCenter",
+  "author": "MaheTools",
   "homepage": "https://github.com/ZToolsCenter/ZTools",
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ import { execFile } from 'child_process'
 import { app, BrowserWindow, ipcMain, screen, shell, systemPreferences } from 'electron'
 import { getPreloadPath, getRendererPath } from '../utils/appBundlePath'
 
-const APP_BUNDLE_ID = 'top.z-tools'
+const APP_BUNDLE_ID = 'top.mahetools'
 let permissionWindow: BrowserWindow | null = null
 
 export function isAccessibilityPermissionWindowActive(): boolean {

@@ -7,7 +7,7 @@ import {
 } from './runtimeCompatibility'
 
 if (process.platform === 'win32') {
-  app.setAppUserModelId('top.z-tools')
+  app.setAppUserModelId('top.mahetools')
 
   // 在 app ready 前禁用透明 HWND 扩展，避免原生窗口与网页渲染区高度不一致造成底部灰条和搜索框裁切。
   // 合并已有禁用项，保留外部传入的 Chromium 特性配置。
